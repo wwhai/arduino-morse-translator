@@ -1,403 +1,349 @@
 #include <Arduino.h>
 
 const int led = 13;
-const int buz = 8;
+const int buzzer = 8;
 
-int len = 0;
-int unit_delay = 50;
+int delay_interval = 60;
 
 void dot()
 {
   Serial.print(".");
-  digitalWrite(led, HIGH);
-  digitalWrite(buz, HIGH);
-  delay(unit_delay);
   digitalWrite(led, LOW);
-  digitalWrite(buz, LOW);
-  delay(unit_delay);
+  digitalWrite(buzzer, LOW);
+  delay(delay_interval);
+  digitalWrite(led, HIGH);
+  digitalWrite(buzzer, HIGH);
+  delay(delay_interval);
 }
 
 void dash()
 {
   Serial.print("-");
-  digitalWrite(led, HIGH);
-  digitalWrite(buz, HIGH);
-  delay(unit_delay * 4);
   digitalWrite(led, LOW);
-  digitalWrite(buz, LOW);
-  delay(unit_delay);
+  digitalWrite(buzzer, LOW);
+  delay(delay_interval * 4);
+  digitalWrite(led, HIGH);
+  digitalWrite(buzzer, HIGH);
+  delay(delay_interval);
 }
 
 void A()
 {
   dot();
-  delay(unit_delay);
   dash();
-  delay(unit_delay);
 }
 void B()
 {
   dash();
-  delay(unit_delay);
   dot();
-  delay(unit_delay);
   dot();
-  delay(unit_delay);
   dot();
-  delay(unit_delay);
 }
 void C()
 {
   dash();
-  delay(unit_delay);
+
   dot();
-  delay(unit_delay);
+
   dash();
-  delay(unit_delay);
+
   dot();
-  delay(unit_delay);
 }
 void D()
 {
   dash();
-  delay(unit_delay);
+
   dot();
-  delay(unit_delay);
+
   dot();
-  delay(unit_delay);
 }
 void E()
 {
   dot();
-  delay(unit_delay);
 }
 void f()
 {
   dot();
-  delay(unit_delay);
   dot();
-  delay(unit_delay);
   dash();
-  delay(unit_delay);
   dot();
-  delay(unit_delay);
 }
 void G()
 {
   dash();
-  delay(unit_delay);
   dash();
-  delay(unit_delay);
   dot();
-  delay(unit_delay);
 }
 void H()
 {
   dot();
-  delay(unit_delay);
   dot();
-  delay(unit_delay);
   dot();
-  delay(unit_delay);
   dot();
-  delay(unit_delay);
 }
 void I()
 {
   dot();
-  delay(unit_delay);
   dot();
-  delay(unit_delay);
 }
 void J()
 {
   dot();
-  delay(unit_delay);
   dash();
-  delay(unit_delay);
   dash();
-  delay(unit_delay);
   dash();
-  delay(unit_delay);
 }
 void K()
 {
   dash();
-  delay(unit_delay);
   dot();
-  delay(unit_delay);
   dash();
-  delay(unit_delay);
 }
 void L()
 {
   dot();
-  delay(unit_delay);
+
   dash();
-  delay(unit_delay);
+
   dot();
-  delay(unit_delay);
+
   dot();
-  delay(unit_delay);
 }
 void M()
 {
   dash();
-  delay(unit_delay);
+
   dash();
-  delay(unit_delay);
 }
 void N()
 {
   dash();
-  delay(unit_delay);
+
   dot();
-  delay(unit_delay);
 }
 void O()
 {
   dash();
-  delay(unit_delay);
+
   dash();
-  delay(unit_delay);
+
   dash();
-  delay(unit_delay);
 }
 void P()
 {
   dot();
-  delay(unit_delay);
+
   dash();
-  delay(unit_delay);
+
   dash();
-  delay(unit_delay);
+
   dot();
 }
 void Q()
 {
   dash();
-  delay(unit_delay);
+
   dash();
-  delay(unit_delay);
+
   dot();
-  delay(unit_delay);
+
   dash();
-  delay(unit_delay);
 }
 void R()
 {
   dot();
-  delay(unit_delay);
+
   dash();
-  delay(unit_delay);
+
   dot();
-  delay(unit_delay);
 }
 void S()
 {
   dot();
-  delay(unit_delay);
+
   dot();
-  delay(unit_delay);
+
   dot();
-  delay(unit_delay);
 }
 void T()
 {
   dash();
-  delay(unit_delay);
 }
 void U()
 {
   dot();
-  delay(unit_delay);
+
   dot();
-  delay(unit_delay);
+
   dash();
-  delay(unit_delay);
 }
 void V()
 {
   dot();
-  delay(unit_delay);
+
   dot();
-  delay(unit_delay);
+
   dot();
-  delay(unit_delay);
+
   dash();
-  delay(unit_delay);
 }
 void W()
 {
   dot();
-  delay(unit_delay);
+
   dash();
-  delay(unit_delay);
+
   dash();
-  delay(unit_delay);
 }
 void X()
 {
   dash();
-  delay(unit_delay);
+
   dot();
-  delay(unit_delay);
+
   dot();
-  delay(unit_delay);
+
   dash();
-  delay(unit_delay);
 }
 void Y()
 {
   dash();
-  delay(unit_delay);
+
   dot();
-  delay(unit_delay);
+
   dash();
-  delay(unit_delay);
+
   dash();
-  delay(unit_delay);
 }
 void Z()
 {
   dash();
-  delay(unit_delay);
+
   dash();
-  delay(unit_delay);
+
   dot();
-  delay(unit_delay);
+
   dot();
-  delay(unit_delay);
 }
 void one()
 {
   dot();
-  delay(unit_delay);
+
   dash();
-  delay(unit_delay);
+
   dash();
-  delay(unit_delay);
+
   dash();
-  delay(unit_delay);
+
   dash();
-  delay(unit_delay);
 }
 void two()
 {
   dot();
-  delay(unit_delay);
+
   dot();
-  delay(unit_delay);
+
   dash();
-  delay(unit_delay);
+
   dash();
-  delay(unit_delay);
+
   dash();
-  delay(unit_delay);
 }
 void three()
 {
   dot();
-  delay(unit_delay);
+
   dot();
-  delay(unit_delay);
+
   dot();
-  delay(unit_delay);
+
   dash();
-  delay(unit_delay);
+
   dash();
-  delay(unit_delay);
 }
 void four()
 {
   dot();
-  delay(unit_delay);
+
   dot();
-  delay(unit_delay);
+
   dot();
-  delay(unit_delay);
+
   dot();
-  delay(unit_delay);
+
   dash();
-  delay(unit_delay);
 }
 void five()
 {
   dot();
-  delay(unit_delay);
+
   dot();
-  delay(unit_delay);
+
   dot();
-  delay(unit_delay);
+
   dot();
-  delay(unit_delay);
+
   dot();
-  delay(unit_delay);
 }
 void six()
 {
   dash();
-  delay(unit_delay);
+
   dot();
-  delay(unit_delay);
+
   dot();
-  delay(unit_delay);
+
   dot();
-  delay(unit_delay);
+
   dot();
-  delay(unit_delay);
 }
 void seven()
 {
   dash();
-  delay(unit_delay);
+
   dash();
-  delay(unit_delay);
+
   dot();
-  delay(unit_delay);
+
   dot();
-  delay(unit_delay);
+
   dot();
-  delay(unit_delay);
 }
 void eight()
 {
   dash();
-  delay(unit_delay);
+
   dash();
-  delay(unit_delay);
+
   dash();
-  delay(unit_delay);
+
   dot();
-  delay(unit_delay);
+
   dot();
-  delay(unit_delay);
 }
 void nine()
 {
   dash();
-  delay(unit_delay);
+
   dash();
-  delay(unit_delay);
+
   dash();
-  delay(unit_delay);
+
   dash();
-  delay(unit_delay);
+
   dot();
-  delay(unit_delay);
 }
 void zero()
 {
   dash();
-  delay(unit_delay);
+
   dash();
-  delay(unit_delay);
+
   dash();
-  delay(unit_delay);
+
   dash();
-  delay(unit_delay);
+
   dash();
-  delay(unit_delay);
 }
 void morse(char ch)
 {
@@ -547,8 +493,8 @@ void morse(char ch)
   }
   else if (ch == ' ')
   {
-    delay(unit_delay * 7);
-    Serial.print("/ ");
+    delay(delay_interval * 4);
+    Serial.println("/ ");
   }
   else
   {
@@ -565,17 +511,17 @@ void String2Morse(String code)
     morse(ch);
   }
   digitalWrite(led, HIGH);
-  digitalWrite(buz, HIGH);
+  digitalWrite(buzzer, HIGH);
 }
 
 void setup()
 {
   Serial.begin(9600);
   pinMode(led, OUTPUT);
-  pinMode(buz, OUTPUT);
+  pinMode(buzzer, OUTPUT);
   digitalWrite(led, HIGH);
-  digitalWrite(buz, HIGH);
-  Serial.println("I am ready...");
+  digitalWrite(buzzer, HIGH);
+  Serial.println("++++");
 }
 
 void loop()
@@ -583,8 +529,6 @@ void loop()
   while (Serial.available())
   {
     String code = Serial.readString();
-    Serial.print(code);
-    Serial.print(" = ");
     String2Morse(code);
     Serial.println();
   }
